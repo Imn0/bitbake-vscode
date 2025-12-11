@@ -1,0 +1,86 @@
+{
+    "name": "bitbacken",
+    "displayName": "bitbacken",
+    "description": "Bitbake language support (no LSP)",
+    "version": "0.0.2",
+    "repository": {
+        "url": "https://github.com/Imn0/bitbake-vscode"
+    },
+    "publisher": "imno",
+    "engines": {
+        "vscode": "^1.92.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "bitbake",
+                "aliases": [
+                    "bitbake",
+                    "bitbake"
+                ],
+                "extensions": [
+                    ".bb",
+                    ".bbappend",
+                    ".bbclass",
+                    ".inc",
+                    ".conf"
+                ],
+                "configuration": "./bb.language-configuration.json",
+                "icon": {
+                    "dark": "./images/yocto-file-icon.svg",
+                    "light": "./images/yocto-file-icon.svg"
+                }
+            },
+            {
+                "id": "yocto-conf",
+                "aliases": [
+                    "yocto-conf"
+                ],
+                "extensions": [
+                    ".conf"
+                ],
+                "configuration": "./bb.language-configuration.json",
+                "icon": {
+                    "dark": "./images/yoctoconf-file-icon.svg",
+                    "light": "./images/yoctoconf-file-icon.svg"
+                }
+            },
+            {
+                "id": "diff",
+                "aliases": [
+                    "diff",
+                    "patch"
+                ],
+                "extensions": [
+                    ".diff",
+                    ".patch"
+                ],
+                "configuration": "./diff.language-configuration.json",
+                "icon": {
+                    "dark": "./images/diff-file-icon.svg",
+                    "light": "./images/diff-file-icon.svg"
+                }
+            }
+        ],
+        "grammars": [
+            {
+                "language": "bitbake",
+                "scopeName": "source.bb",
+                "path": "./syntaxes/bitbake.tmLanguage.json"
+            },
+            {
+                "language": "yocto-conf",
+                "scopeName": "source.conf",
+                "path": "./syntaxes/bitbake.tmLanguage.json"
+            },
+            {
+                "language": "diff",
+                "scopeName": "source.diff",
+                "path": "./syntaxes/diff.tmLanguage"
+            }
+        ]
+    }
+}
