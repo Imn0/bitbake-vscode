@@ -13,6 +13,12 @@
             "include": "#string"
         },
         {
+            "include": "#bitbake-operator"
+        },
+        {
+            "include": "#bitbake-override"
+        },
+        {
             "include": "#numeric"
         },
         {
@@ -29,9 +35,6 @@
         },
         {
             "include": "#functions"
-        },
-        {
-            "include": "#bitbake-operator"
         },
         {
             "include": "#variable-name"
@@ -257,7 +260,11 @@
             "name": "keyword.operator.bb"
         },
         "bitbake-operator": {
-            "match": "(?<=:)([a-zA-Z_][\\w_\\-]*)",
+            "match": "(?<=:)(append|prepend|remove)",
+            "name": "constant.language.bb"
+        },
+        "bitbake-override": {
+            "match": "(?<=:)([A-Za-z0-9][\\w\\-]*)",
             "name": "keyword.control.bb"
         },
         "parenthesis-open": {
